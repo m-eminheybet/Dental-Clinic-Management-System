@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A37A660D-BA7A-439F-B060-6F6C9017286C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DisPolikinligi</RootNamespace>
+    <AssemblyName>DisPolikinligi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ekranlar\adminEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\adminEkrani.Designer.cs">
+      <DependentUpon>adminEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\anaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\anaEkran.Designer.cs">
+      <DependentUpon>anaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dizinler\ConnectionString.cs" />
+    <Compile Include="ekranlar\girisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\girisEkrani.Designer.cs">
+      <DependentUpon>girisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dizinler\dizinler.cs" />
+    <Compile Include="ekranlar\hastaEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\hastaEkrani.Designer.cs">
+      <DependentUpon>hastaEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\istatistikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\istatistikler.Designer.cs">
+      <DependentUpon>istatistikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\kullaniciEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\kullaniciEkrani.Designer.cs">
+      <DependentUpon>kullaniciEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\randevuEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\randevuEkrani.Designer.cs">
+      <DependentUpon>randevuEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\receteEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\receteEkrani.Designer.cs">
+      <DependentUpon>receteEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\tedaviEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\tedaviEkrani.Designer.cs">
+      <DependentUpon>tedaviEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ekranlar\yuklemeEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ekranlar\yuklemeEkrani.Designer.cs">
+      <DependentUpon>yuklemeEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ekranlar\adminEkrani.resx">
+      <DependentUpon>adminEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\anaEkran.resx">
+      <DependentUpon>anaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\girisEkrani.resx">
+      <DependentUpon>girisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\hastaEkrani.resx">
+      <DependentUpon>hastaEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\istatistikler.resx">
+      <DependentUpon>istatistikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\kullaniciEkrani.resx">
+      <DependentUpon>kullaniciEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ekranlar\randevuEkrani.resx">
+      <DependentUpon>randevuEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\receteEkrani.resx">
+      <DependentUpon>receteEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\tedaviEkrani.resx">
+      <DependentUpon>tedaviEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ekranlar\yuklemeEkrani.resx">
+      <DependentUpon>yuklemeEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-1072366_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-2055567_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222222.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1111.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ekran Alıntısı.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11111.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
